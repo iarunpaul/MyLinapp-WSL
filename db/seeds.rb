@@ -9,5 +9,7 @@
 5.times do |i|
   Publisher.create(name: "Publisher ##{i}")
 	Category.create(name: "Category ##{i}")
+	Product.create(name: "Product ##{i}", price: i, released_on: "#{i}/#{i}/2005", discontinued: false, rating: i, publisher_id: i)
+	Categorization.create(name:"Categorization ##{i}", product_id: i, category_id: i)
 end
 
